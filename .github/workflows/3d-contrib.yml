@@ -1,14 +1,16 @@
-# 🧊 3D Isometric Contribution Chart
-# Repo: yoshi389111/github-profile-3d-contrib
-# Generates a 3D block skyline of your year's contributions
-# Output: pushed directly to your profile repo (main branch)
+# 3D Isometric Contribution Skyline
+# Uses Node 24-compatible actions only (actions/checkout@v7 + github-profile-3d-contrib@0.9.3).
 
 name: Generate 3D Contribution Chart
 
 on:
   schedule:
-    - cron: "0 18 * * *"  # Daily at 18:00 UTC
+    - cron: "0 18 * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/3d-contrib.yml"
 
 permissions:
   contents: write
@@ -20,22 +22,23 @@ jobs:
     name: generate-github-profile-3d-contrib
 
     steps:
-      - name: 🛎️ Checkout
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v7
 
-      - name: 🧊 Generate 3D Contribution Chart
-        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - name: Generate 3D Contribution Chart
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          # 🎨 Available settings:
-          # SETTING_JSON: '{"backgroundColor":"#0D1117"}'
-          # Optional themes: github, github-green, twitter, dracula, vue, etc.
 
-      - name: 💾 Commit & Push 3D Chart
+      - name: Commit & Push 3D Chart
         run: |
           git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A .
-          git commit -m "🧊 Auto-update 3D contribution chart [skip ci]" || echo "No changes to commit"
-          git push
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-3d-contrib/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update 3D contribution chart [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi

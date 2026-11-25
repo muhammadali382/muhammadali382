@@ -1,17 +1,12 @@
-# 📊 GitHub Profile Metrics (Lowlighter/Metrics)
-# Generates rich infographic SVGs: isometric calendar, language breakdown, habits
-# Requires: METRICS_TOKEN secret (classic PAT with read:user, repo scopes)
-#
-# 🔑 Setup:
-#   1. Go to GitHub → Settings → Developer Settings → Personal Access Tokens → Classic
-#   2. Create token with scopes: read:user, repo, public_repo
-#   3. Add it to this repo's Secrets as: METRICS_TOKEN
+# GitHub Profile Metrics (Lowlighter Metrics)
+# Optional workflow: requires a classic PAT secret named METRICS_TOKEN (scopes: read:user, repo).
+# Safely skips without failing if METRICS_TOKEN has not been added yet.
 
 name: Generate Profile Metrics
 
 on:
   schedule:
-    - cron: "0 2 * * *"   # Daily at 02:00 UTC
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -23,9 +18,25 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      # ── 1. Isometric Contribution Calendar ───────────────────────────────
-      - name: 🧊 Isometric Contribution Calendar
-        uses: lowlighter/metrics@latest
+      - name: Check METRICS_TOKEN secret
+        id: check_token
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -n "$TOKEN" ]; then
+            echo "has_token=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::METRICS_TOKEN secret is not set. Add a classic PAT (read:user, repo) in Settings -> Secrets -> Actions to enable metrics generation."
+            echo "has_token=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout repository
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: actions/checkout@v7
+
+      - name: Isometric Contribution Calendar
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.isometric.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -36,9 +47,9 @@ jobs:
           config_output: svg
           config_padding: 10%
 
-      # ── 2. Languages Breakdown ────────────────────────────────────────────
-      - name: 🗂️ Language Breakdown
-        uses: lowlighter/metrics@latest
+      - name: Language Breakdown
+        if: steps.check_token.outputs.has_token == 'true'
+        uses: lowlighter/metrics@v3.34
         with:
           filename: metrics.languages.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -49,24 +60,15 @@ jobs:
           plugin_languages_details: bytes-size, percentage
           config_output: svg
 
-      # ── 3. Coding Habits ──────────────────────────────────────────────────
-      - name: ⏰ Coding Habits
-        uses: lowlighter/metrics@latest
-        with:
-          filename: metrics.habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_days: 14
-          config_timezone: Asia/Karachi
-          config_output: svg
-
-      - name: 💾 Commit & Push Metrics
+      - name: Commit & Push Metrics
+        if: steps.check_token.outputs.has_token == 'true'
         run: |
           git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add metrics.*.svg || true
-          git commit -m "📊 Auto-update metrics [skip ci]" || echo "No changes to commit"
-          git push
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics.*.svg
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update metrics [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
