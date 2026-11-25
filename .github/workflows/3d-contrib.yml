@@ -1,0 +1,41 @@
+# 🧊 3D Isometric Contribution Chart
+# Repo: yoshi389111/github-profile-3d-contrib
+# Generates a 3D block skyline of your year's contributions
+# Output: pushed directly to your profile repo (main branch)
+
+name: Generate 3D Contribution Chart
+
+on:
+  schedule:
+    - cron: "0 18 * * *"  # Daily at 18:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    name: generate-github-profile-3d-contrib
+
+    steps:
+      - name: 🛎️ Checkout
+        uses: actions/checkout@v4
+
+      - name: 🧊 Generate 3D Contribution Chart
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          # 🎨 Available settings:
+          # SETTING_JSON: '{"backgroundColor":"#0D1117"}'
+          # Optional themes: github, github-green, twitter, dracula, vue, etc.
+
+      - name: 💾 Commit & Push 3D Chart
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A .
+          git commit -m "🧊 Auto-update 3D contribution chart [skip ci]" || echo "No changes to commit"
+          git push
