@@ -30,14 +30,14 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg?color_snake=#09090B&color_dots=#f4f4f5,#d4d4d8,#a1a1aa,#52525b,#09090b
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#FFFFFF
+            dist/github-snake.svg?palette=github-light&color_snake=#10B981
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#10B981
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
-          commit_message: "chore: update contribution snake"
+          commit_message: "chore: update contribution snake with colorful palette"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
