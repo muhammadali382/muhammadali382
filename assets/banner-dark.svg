@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="100%" height="250">
+  <defs>
+    <linearGradient id="bg-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090C"/>
+      <stop offset="100%" stop-color="#0F1015"/>
+    </linearGradient>
+    <pattern id="grid-dots-dark" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#FFFFFF" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="1" y="1" width="918" height="248" rx="14" fill="url(#bg-grad-dark)" stroke="#27272A" stroke-width="1.2"/>
+  <rect x="1" y="1" width="918" height="248" rx="14" fill="url(#grid-dots-dark)"/>
+
+  <!-- Top System Bar -->
+  <g transform="translate(28, 25)">
+    <!-- Terminal control dots -->
+    <circle cx="0" cy="0" r="4.5" fill="#EF4444" fill-opacity="0.85"/>
+    <circle cx="15" cy="0" r="4.5" fill="#F59E0B" fill-opacity="0.85"/>
+    <circle cx="30" cy="0" r="4.5" fill="#10B981" fill-opacity="0.85"/>
+    
+    <!-- System Route Breadcrumb -->
+    <text x="50" y="4" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace" font-size="11.5" fill="#71717A" font-weight="500">
+      muhammadali382 <tspan fill="#3F3F46">/</tspan> core-systems-architect
+    </text>
+
+    <!-- Status Badge -->
+    <g transform="translate(720, -10)">
+      <rect x="0" y="0" width="144" height="22" rx="11" fill="#14151B" stroke="#27272A" stroke-width="1"/>
+      <circle cx="12" cy="11" r="3" fill="#10B981"/>
+      <text x="22" y="14.5" font-family="'SFMono-Regular', Consolas, Menlo, monospace" font-size="9.5" fill="#E4E4E7" font-weight="600" letter-spacing="0.5">OPEN TO COLLAB</text>
+    </g>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="28" y1="48" x2="892" y2="48" stroke="#27272A" stroke-width="1"/>
+
+  <!-- Name & Title -->
+  <g transform="translate(32, 96)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">
+      MUHAMMAD ALI
+    </text>
+    <text x="0" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#A1A1AA" letter-spacing="0.8">
+      AGENTIC AI ARCHITECT · DISTRIBUTED MULTI-AGENT &amp; RAG SYSTEMS · FULL-STACK
+    </text>
+    <text x="0" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#71717A">
+      Lahore, Pakistan &bull; Minhaj University Lahore (STCS)
+    </text>
+  </g>
+
+  <!-- Architectural Focus Chips -->
+  <g transform="translate(32, 178)">
+    <!-- Chip 1 -->
+    <rect x="0" y="0" width="198" height="34" rx="8" fill="#14151B" stroke="#27272A" stroke-width="1"/>
+    <text x="14" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#E4E4E7">
+      ⚡ LangGraph &amp; Multi-Agent
+    </text>
+
+    <!-- Chip 2 -->
+    <rect x="214" y="0" width="198" height="34" rx="8" fill="#14151B" stroke="#27272A" stroke-width="1"/>
+    <text x="228" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#E4E4E7">
+      🛠️ FastMCP Tool Protocols
+    </text>
+
+    <!-- Chip 3 -->
+    <rect x="428" y="0" width="202" height="34" rx="8" fill="#14151B" stroke="#27272A" stroke-width="1"/>
+    <text x="442" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#E4E4E7">
+      🔍 Corrective &amp; Self-RAG
+    </text>
+
+    <!-- Chip 4 -->
+    <rect x="646" y="0" width="210" height="34" rx="8" fill="#14151B" stroke="#27272A" stroke-width="1"/>
+    <text x="660" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#E4E4E7">
+      🌐 Next.js, FastAPI &amp; Flutter
+    </text>
+  </g>
+</svg>
