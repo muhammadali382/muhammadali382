@@ -1,19 +1,20 @@
 <div align="center">
 
 <!-- Top Multi-Tone Accent Rule -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:10B981,50:6366F1,100:EC4899&height=4" width="100%" alt="" />
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:10B981,35:06B6D4,70:6366F1,100:EC4899&height=4" width="100%" alt="" />
 
 <br/>
 
 <h1>Muhammad Ali</h1>
 
-<p>
-  <strong>Agentic AI Engineer &nbsp;&middot;&nbsp; Full-Stack Developer (Next.js / MERN) &nbsp;&middot;&nbsp; Flutter &amp; Cloud Builder</strong>
+<!-- Animated Motion Gradient Title Line -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/assets/agentic-title.svg" alt="Agentic AI Engineer · Full-Stack Developer (Next.js / MERN) · Flutter &amp; Cloud Builder" width="100%" />
 </p>
 
 <!-- Animated Typing Tagline -->
 <a href="https://github.com/muhammadali382">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=2800&pause=1000&color=10B981&center=true&vCenter=true&repeat=true&width=740&lines=Agentic+AI+Engineering+%C2%B7+LangGraph+%26+RAG+Pipelines;Model+Context+Protocol+(FastMCP)+%26+Multi-Agent+Systems;Full-Stack+Web+(Next.js+15+%2F+MERN)+%26+Flutter+Apps;Cloud+Architecture+(AWS)+%26+Event+Automations+(n8n)" alt="Typing animation summarizing Muhammad Ali's focus areas" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2800&pause=1000&color=10B981&center=true&vCenter=true&repeat=true&width=750&lines=Agentic+AI+Engineering+%C2%B7+LangGraph+%26+RAG+Pipelines;Model+Context+Protocol+(FastMCP)+%26+Multi-Agent+Systems;Full-Stack+Web+(Next.js+15+%2F+MERN)+%26+Flutter+Apps;Cloud+Architecture+(AWS)+%26+Event+Automations+(n8n)" alt="Typing animation summarizing Muhammad Ali's focus areas" />
 </a>
 
 <p>
@@ -78,41 +79,45 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>🤖 Agentic AI, AI Tools &amp; Automation</h3>
+      <img src="https://capsule-render.vercel.app/api?type=rect&color=0:10B981,100:06B6D4&height=3" width="100%" alt="" />
+      <h3>🤖 Agentic AI &amp; Intelligent Automation</h3>
       <p>
-        Architecting resilient, stateful multi-agent workflows using <strong>LangGraph</strong> with checkpointed memory (SQLite/PostgreSQL), Human-in-the-Loop (HITL) approval gates, and multi-provider LLM routing (Groq, OpenAI, Anthropic, Gemini). Full execution observability and evaluation with <strong>LangSmith</strong>.
+        Architecting stateful, resilient multi-agent systems using <strong>LangGraph</strong> with persistent checkpointer memory (SQLite &amp; PostgreSQL), Human-in-the-Loop (HITL) approval gates, and multi-provider LLM routing across Groq, OpenAI, Anthropic, and Gemini. Comprehensive execution observability and evaluation configured with <strong>LangSmith</strong>.
       </p>
       <p>
-        Building modular remote and local <strong>FastMCP</strong> tool servers integrated via <code>langchain-mcp-adapters</code> with primary/fallback routing across search, weather, and knowledge retrieval. Production-grade <strong>Corrective RAG (CRAG)</strong> and <strong>Self-RAG</strong> pipelines with <strong>ChromaDB</strong> &amp; <strong>FAISS</strong>, paired with event-driven automation workflows in <strong>n8n</strong>.
+        Engineering modular <strong>FastMCP</strong> tool servers integrated via <code>langchain-mcp-adapters</code> with resilient primary and fallback routing. Deploying production-grade Corrective RAG (<strong>CRAG</strong>) and <strong>Self-RAG</strong> pipelines with <strong>ChromaDB</strong> and <strong>FAISS</strong>, orchestrated alongside automated, event-driven background workflows built in <strong>n8n</strong>.
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🌐 Web Applications (Next.js, React, MERN)</h3>
+      <img src="https://capsule-render.vercel.app/api?type=rect&color=0:6366F1,100:0EA5E9&height=3" width="100%" alt="" />
+      <h3>🌐 Web Applications (Next.js &amp; MERN)</h3>
       <p>
-        Modern, responsive web applications engineered with <strong>Next.js 15</strong> (App Router, Server Actions), <strong>React 19</strong>, <strong>TypeScript</strong>, and utility styling with <strong>Tailwind CSS</strong>.
+        Engineering high-performance, responsive web interfaces with <strong>Next.js 15</strong> (App Router, Server Actions), <strong>React 19</strong>, and <strong>TypeScript</strong>, styled with utility-first <strong>Tailwind CSS</strong>. Architected for optimal Core Web Vitals, seamless accessibility, and clean component-driven design systems.
       </p>
       <p>
-        Full-stack MERN engineering across <strong>MongoDB</strong>, <strong>Express.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>. High-performance asynchronous backend microservices developed in <strong>FastAPI</strong> with bidirectional <strong>WebSockets</strong> for real-time AI streaming, low-latency client communication, and clean RESTful API design.
+        Developing full-stack MERN solutions across <strong>MongoDB</strong>, <strong>Express.js</strong>, <strong>React</strong>, and <strong>Node.js</strong>. Building high-throughput asynchronous backend microservices in <strong>FastAPI</strong> with bidirectional <strong>WebSockets</strong> for real-time AI token streaming, low-latency client communication, and structured RESTful APIs.
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>📱 Mobile Applications (Flutter &amp; Mobile)</h3>
+      <img src="https://capsule-render.vercel.app/api?type=rect&color=0:02569B,100:38BDF8&height=3" width="100%" alt="" />
+      <h3>📱 Mobile Engineering (Flutter &amp; Dart)</h3>
       <p>
-        Cross-platform native mobile applications crafted in <strong>Flutter</strong> &amp; <strong>Dart</strong> for iOS and Android with responsive layouts and fluid 60fps performance.
+        Crafting cross-platform native mobile applications in <strong>Flutter</strong> &amp; <strong>Dart</strong> for Android and iOS, featuring fluid 60fps animations, adaptive screen layouts, and robust reactive state management. Designed for intuitive user experiences, native responsiveness, and high device compatibility.
       </p>
       <p>
-        Zero-trust security models with <strong>Firebase Authentication</strong>, real-time database synchronization via <strong>Cloud Firestore</strong>, and serverless Cloud Functions. Robust offline-first architecture, local caching, and predictable state management.
+        Implementing zero-trust client security models with <strong>Firebase Authentication</strong>, real-time data persistence via <strong>Cloud Firestore</strong>, and serverless Cloud Functions. Engineered with offline-first local caching, background sync mechanisms, and resilient network failover handling.
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>☁️ Cloud Infrastructure (AWS, Cloud) &amp; Databases</h3>
+      <img src="https://capsule-render.vercel.app/api?type=rect&color=0:F59E0B,100:EC4899&height=3" width="100%" alt="" />
+      <h3>☁️ Cloud Systems &amp; Database Architecture</h3>
       <p>
-        Scalable cloud deployments and serverless backends across <strong>AWS</strong>, <strong>Firebase</strong>, <strong>Vercel</strong>, and <strong>Render</strong>.
+        Designing scalable cloud infrastructure and serverless deployments across <strong>AWS</strong>, <strong>Firebase</strong>, <strong>Vercel</strong>, and <strong>Render</strong>. Optimizing containerized microservice deployments with <strong>Docker</strong>, production Linux environments, and automated CI/CD continuous integration pipelines using <strong>GitHub Actions</strong>.
       </p>
       <p>
-        Relational database architecture, indexing, and connection pooling with <strong>PostgreSQL</strong> and <strong>SQLite</strong> (agent checkpoints &amp; state persistence), combined with document storage in <strong>MongoDB</strong>. Reproducible containerization with <strong>Docker</strong>, CI/CD automation with <strong>GitHub Actions</strong>, and production Linux/Bash environments.
+        Structuring enterprise relational and document persistence using <strong>PostgreSQL</strong>, <strong>SQLite</strong> (agent checkpoints and conversation memory), and <strong>MongoDB</strong>. Implementing efficient schema indexing, connection pooling, automated database backups, and strict data-layer security policies.
       </p>
     </td>
   </tr>
