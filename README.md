@@ -7,15 +7,12 @@
 
 <h1>Muhammad Ali</h1>
 
-<!-- Animated Motion Gradient Title Line -->
+<!-- Animated Gradient Motion Tagline -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/assets/agentic-title.svg" alt="Agentic AI Engineer · Full-Stack Developer (Next.js / MERN) · Flutter &amp; Cloud Builder" width="100%" />
+  <a href="https://github.com/muhammadali382">
+    <img src="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/assets/typing-gradient.svg" alt="Muhammad Ali - Agentic AI Engineering &amp; Systems Architecture" />
+  </a>
 </p>
-
-<!-- Animated Typing Tagline -->
-<a href="https://github.com/muhammadali382">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=17&duration=2800&pause=1000&color=10B981&center=true&vCenter=true&repeat=true&width=750&lines=Agentic+AI+Engineering+%C2%B7+LangGraph+%26+RAG+Pipelines;Model+Context+Protocol+(FastMCP)+%26+Multi-Agent+Systems;Full-Stack+Web+(Next.js+15+%2F+MERN)+%26+Flutter+Apps;Cloud+Architecture+(AWS)+%26+Event+Automations+(n8n)" alt="Typing animation summarizing Muhammad Ali's focus areas" />
-</a>
 
 <p>
   Minhaj University Lahore (STCS) &nbsp;&middot;&nbsp; Lahore, Pakistan
