@@ -282,8 +282,8 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/profile-3d-contrib/profile-night-rainbow.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/profile-3d-contrib/profile-rainbow.svg" />
-    <img src="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/profile-3d-contrib/profile-rainbow.svg" width="100%" alt="3D Contribution Skyline" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/profile-3d-contrib/profile-green-animate.svg" />
+    <img src="https://raw.githubusercontent.com/muhammadali382/muhammadali382/main/profile-3d-contrib/profile-green-animate.svg" width="100%" alt="3D Contribution Skyline" />
   </picture>
 </p>
 
